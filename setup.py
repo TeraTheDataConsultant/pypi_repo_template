@@ -11,23 +11,25 @@ def read_requirements():
             return req.read().splitlines()
     return []
 
+
 setup(
-    name="cowgirl-ai-template",
+    name="pypi-repo-template",
     version="0.0.1",
-    description="Cowgirl AI - Core Assistant",
+    description="PYPI Repository Template",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
     url="https://github.com/Cowgirl-AI/core",
     author="Tera Earlywine",
     author_email="dev@teraearlywine.com",
     # license='MIT',
-    packages=find_packages(where='src'),
-    package_dir={'': 'src'},
+    packages=find_packages(where="src"),
+    package_dir={"": "src"},
     install_requires=read_requirements(),
     python_requires=">=3.10",
     entry_points={
         "console_scripts": [
-            "cowgirl-ai-template=cli.main:main",
+            # command=folder.script_name.main       # example
+            "template=cli.main:main",
         ],
     },
     include_package_data=True,
